@@ -5,7 +5,7 @@
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* 👈🏻 removendo os pontos da lista não ordenada */
 }
 
 /* 👇🏻 Transformando o padrão da que é 16px em 10px, para facilitar na tranformação de pixel para rem */
@@ -14,17 +14,53 @@ ul {
 }
 
 body {
-  background: #ECE9FD;
+  font-family: "Epilogue", sans-serif;
+
+  background: #ece9fd;
 
   padding: 6rem 2.3rem 6.6rem;
   font-size: 1.6rem;
 }
 
 h1 {
-  font-family: "Epilogue", sans-serif;
   font-weight: 800;
   font-size: 4rem;
   line-height: 4.8rem;
 
   color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+
+/* 👇🏻 Pega o primeito `p` */
+main p:first-child {
+  color: #7158ef;
+
+  letter-spacing: 0.3rem; /* 👈🏻 espaço entre as letras do texto  */
+  text-transform: uppercase;
+  line-height: 3.2rem; /* 👈🏻 altura da linha */
+
+  margin-bottom: 1.7rem;
+}
+
+/* 👇🏻 "h1 + p" é um seletor CSS que seleciona um elemento <p> que vem imediatamente após um elemento <h1> no código HTML */
+h1 + p {
+  line-height: 3.2rem;
+  color: rgba(10, 0, 57, 0.64);
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+
+  text-decoration: none; /* 👈🏻 removendo o estilo do elemento `a` */
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
 }
