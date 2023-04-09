@@ -68,10 +68,13 @@ a:hover {
 
 ul {
   margin-top: 7.2rem;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+/* O símbolo "+" em CSS é usado para selecionar um elemento que aparece imediatamente após outro elemento dentro do mesmo elemento pai. É como dizer "o próximo elemento que vem logo depois deste".
+👇🏻
+*/
+ul li + li {
+  margin-top: 3.2rem;
 }
 
 ul li {
@@ -94,4 +97,32 @@ ul li span {
   letter-spacing: -2px; /* Unidade de medida pequena é interessante deixar em pixel */
 
   color: #090039;
+}
+
+/* "@media" é uma regra de mídia em CSS que define estilos específicos para serem aplicados quando a largura da tela é igual ou maior a determinados pixels. É um recurso do CSS chamado de "Media Queries" que permite criar estilos condicionais com base nas características do dispositivo ou tamanho de tela. 
+👇🏻 */
+@media (min-width: 700px) {
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1021px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  /* O símbolo ">" é um seletor de filho direto em CSS. Quando usado em um seletor, indica que o elemento selecionado é um filho direto do elemento anterior mencionado.
+  
+  No código CSS que você forneceu, "main > div" é um seletor que seleciona todos os elementos "div" que são filhos diretos de um elemento "main" em uma página web
+  👇🏻 */
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
 }
